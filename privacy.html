@@ -34,7 +34,7 @@
       </div>
 
       <h2>1. 本程式使用 YouTube API 服務</h2>
-      <p>本程式透過 YouTube API 服務（YouTube Data API v3）取得資料。使用本程式即表示同意受 <a href="https://www.youtube.com/t/terms">YouTube 服務條款</a>約束；Google 如何處理資料，請參考 <a href="https://policies.google.com/privacy">Google 隱私權政策</a>。</p>
+      <p>本程式透過 YouTube API 服務（YouTube Data API v3）取得資料。使用本程式即表示同意受 <a href="https://www.youtube.com/t/terms">YouTube 服務條款</a>約束；Google 如何處理資料，請參考 <a href="https://policies.google.com/privacy">Google 隱私權政策</a>。本程式的其他使用規定請見<a href="terms.html">使用條款</a>。</p>
 
       <h2>2. 我們取得哪些資料</h2>
       <p>本程式只會以頻道經營者自己的 Google 帳戶授權，申請的權限只有 YouTube 唯讀（<code>https://www.googleapis.com/auth/youtube.readonly</code>）。用這個權限讀取：</p>
@@ -50,28 +50,29 @@
         <li>讓眠小魚在直播中看到留言並即時回應。</li>
         <li>統計聊天室裡的互動投票，例如模擬倉的 <code>!buy</code>、<code>!sell</code>、<code>!hold</code> 指令。</li>
         <li>記住常來的同學，讓她之後的直播能叫出你的名字、接著聊之前的話題。我們不記錄金額與敏感的私人資訊。</li>
-        <li>把同學問了但她還不會的問題記下來，之後補充學習再回答。</li>
+        <li>把同學問了但她還不會的問題記下來，之後補充學習再回答。準備教材時，這些問題可能交給 Anthropic 的 Claude 協助整理；交出前會拿掉留言者的名稱與頻道 ID，只留下問題本身。</li>
       </ul>
-      <p>這些資料不會用於廣告、不會用來建立廣告側寫，也不會販售。</p>
+      <p>這些資料不會用於廣告、不會用來建立廣告側寫、不會販售，也不會用來開發、改進或訓練通用的 AI 或機器學習模型。</p>
 
       <h2>4. 保存與安全</h2>
       <ul>
         <li>上述資料保存在頻道經營者自己的電腦上，不放在公開的地方。</li>
-        <li>直播中的回應由我們電腦上執行的 AI 模型產生。</li>
-        <li>授權產生的存取權杖只保存在本機，不公開，也不放進版本控制。</li>
-        <li>為了記住同學而留下的筆記，會保存到不再需要或你要求刪除為止。</li>
+        <li>直播中的回應由我們電腦上執行的 AI 模型產生，直播時的留言不會送到雲端 AI 服務。</li>
+        <li>從 YouTube 取得的聊天室資料（顯示名稱、頻道 ID、留言內容與時間），以及據此留下的筆記，最多保存 30 天：同學在 30 天內再次留言，會以最新的資料更新；沒有的話，到期自動刪除。</li>
+        <li>授權產生的存取權杖只保存在本機，不公開，也不放進版本控制，保存到授權被撤銷為止。</li>
       </ul>
 
       <h2>5. 分享與揭露</h2>
-      <p>我們不會販售、出租或分享透過 Google API 取得的資料給第三方，法律要求的情況除外。請注意，聊天室留言本來就是 YouTube 上的公開內容；眠小魚在直播中念出或回應的內容，也會成為公開直播與錄影的一部分。</p>
+      <p>除了第 3 節提到、已經拿掉名稱與頻道 ID 的問題內容之外，我們不會販售、出租或分享透過 Google API 取得的資料給第三方，法律要求的情況除外。請注意，聊天室留言本來就是 YouTube 上的公開內容；眠小魚在直播中念出或回應的內容，也會成為公開直播與錄影的一部分。</p>
 
       <h2>6. Google API 有限使用聲明</h2>
       <p>本程式對從 Google API 取得之資訊的使用與傳輸，將遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 服務使用者資料政策</a>，包括其中的「有限使用」要求。</p>
 
       <h2>7. 撤銷授權與刪除資料</h2>
       <ul>
-        <li>授權本程式的 Google 帳戶，可以隨時在 <a href="https://security.google.com/settings/security/permissions">Google 帳戶的安全性設定</a>撤銷本程式的存取權。</li>
-        <li>觀眾如果希望我們刪除眠小魚記住的、與你有關的內容，請透過下方的聯絡方式告訴我們你的 YouTube 顯示名稱或頻道，我們會刪除本機筆記中與你相關的資料。</li>
+        <li>授權本程式的 Google 帳戶，可以隨時在 <a href="https://security.google.com/settings/security/permissions">Google 帳戶的安全性設定</a>撤銷本程式的存取權。撤銷後，我們會在 30 天內刪除透過該授權取得的資料。</li>
+        <li>觀眾如果希望我們刪除眠小魚記住的、與你有關的內容，請透過下方的聯絡方式告訴我們你的 YouTube 顯示名稱或頻道，我們會盡快並在 7 天內刪除本機保存的、與你相關的資料。</li>
+        <li>這只會刪除本程式在我們電腦上保存的資料，不會影響 YouTube 上的任何資料；要刪除你在 YouTube 上的留言，請直接在 YouTube 上操作。</li>
       </ul>
 
       <h2>8. 本網站</h2>
@@ -87,6 +88,7 @@
     <footer>
       <div class="links">
         <a href="./">首頁</a>
+        <a href="terms.html">使用條款</a>
         <a href="https://www.youtube.com/@finashy%E7%9C%A0%E5%B0%8F%E9%AD%9A">YouTube 頻道</a>
         <a href="https://github.com/Synerox/finashy/issues">聯絡我們</a>
       </div>
